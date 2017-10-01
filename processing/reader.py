@@ -52,12 +52,12 @@ for c, d in enumerate(data):
         picture = imread(io.BytesIO(pic['picture']))
         # do something with the picture, etc
 
-plt.imshow(picture)
+# plt.imshow(picture)
 # convert back to normal dictionary
-prod_to_category = dict(prod_to_category)
-
-prod_to_category = pd.DataFrame.from_dict(prod_to_category, orient='index')
-prod_to_category.index.name = '_id'
-prod_to_category.rename(columns={0: 'category_id'}, inplace=True)
-
-print(prod_to_category.head())
+# prod_to_category = dict(prod_to_category)
+#
+# prod_to_category = pd.DataFrame.from_dict(prod_to_category, orient='index')
+# prod_to_category.index.name = '_id'
+# prod_to_category.rename(columns={0: 'category_id'}, inplace=True)
+#
+# print(prod_to_category.head())
