@@ -5,6 +5,7 @@ from skimage.data import imread
 from sklearn import preprocessing
 import io
 
+
 n_rows = 10
 n_entries_overall = 7069896
 pix_x, pix_y, rgb = 180, 180, 3
