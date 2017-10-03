@@ -44,23 +44,6 @@ count_unique_cats = len(df_categories.index)
 
 print("There are ", count_unique_cats, " unique categories to predict. E.g.")
 
-
-def get_category(category_id, level):
-    if level in range(1, 4):
-        try:
-            return df_categories.iloc[df_categories.index == category_id[0], level - 1].values[0]
-        except:
-            print("Error - category_id does not exist")
-    else:
-        print("Error - level must be between 1 - 3")
-
-
-# Play around with the index and cat levels to explore the images in the test data set
-index = 3
-cat_desc_level = 1  # level 1 - 3
-print("ID: ", X_ids[index][0], "category_id: ", Y[index][0], "category_description: ",
-      get_category(Y[index], cat_desc_level))
-
 # using a label encoder, and binarizer to convert all unique category_ids to have a column for each class
 le = preprocessing.LabelEncoder()
 lb = preprocessing.LabelBinarizer()
