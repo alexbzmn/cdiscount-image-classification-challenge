@@ -14,9 +14,7 @@ data = bson.decode_file_iter(open('../input/train_example.bson', 'rb'))
 with open('../input/train_example.bson', 'rb') as b:
     df = pd.DataFrame(bson.decode_all(b.read()))
 
-for e, pic in enumerate(df['imgs'][0]):
-    picture = imread(io.BytesIO(pic['picture']))
-    pix_x, pix_y, rgb = picture.shape
+pix_x, pix_y, rgb = 180, 180, 3
 
 Y_flattened_shape = len(df.index)  # cols of data in train set
 X_ids = np.zeros((Y_flattened_shape, 1)).astype(int)
