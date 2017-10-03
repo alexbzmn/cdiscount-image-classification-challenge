@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-from tf_approach.pre_process import X_train, y_train, X_flattened_shape, Y_flattened_shape
+from tf_approach_kernel.pre_process import X_train, y_train, X_flattened_shape, Y_flattened_shape
 
 # set up params
 seed = 2
